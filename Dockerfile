@@ -419,3 +419,4 @@ RUN yum install -y \
 
 RUN /usr/sbin/groupadd --gid 1000 ec2-user
 RUN /usr/sbin/useradd --uid 1000 --gid 1000 --comment "EC2 Default User" -m ec2-user
+RUN echo 'ec2-user ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers.d/90-cloud-init-users
